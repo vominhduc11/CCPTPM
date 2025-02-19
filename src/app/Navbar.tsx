@@ -4,14 +4,17 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Tippy from '@tippyjs/react/headless'; // different import path!
-import { List, ListItemButton, ListItemText } from '@mui/material';
+import { List, ListItemButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box position="sticky" top={64} zIndex={1}>
             <AppBar position="static" sx={{ backgroundColor: '#000' }}>
                 <Toolbar>
-                    <Button color="inherit">Trang Chủ</Button>
+                    <Button color="inherit">
+                        <Link to="/">Trang chủ</Link>
+                    </Button>
 
                     <Tippy
                         interactive
@@ -31,58 +34,7 @@ const Navbar = () => {
                             >
                                 <List>
                                     <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
+                                        <Link to="/category/Hành động">Hành động</Link>
                                     </ListItemButton>
                                 </List>
                             </Box>
@@ -111,58 +63,7 @@ const Navbar = () => {
                             >
                                 <List>
                                     <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Hành động" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Kinh dị" />
-                                    </ListItemButton>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Khoa học viễn tưởng" />
+                                        <Link to="/category/Hành động">Hành động</Link>
                                     </ListItemButton>
                                 </List>
                             </Box>
@@ -172,8 +73,6 @@ const Navbar = () => {
                             Quốc Gia <ExpandMoreIcon sx={{ ml: 0.5 }} />
                         </Button>
                     </Tippy>
-
-                    <Button color="inherit">Phim Đã Mua</Button>
                 </Toolbar>
             </AppBar>
         </Box>

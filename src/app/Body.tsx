@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Card, CardMedia, Box, Container, Typography, Grid, ImageList, ImageListItem, Button } from '@mui/material';
 import { settings, settings2 } from './setting/Carosel';
 import { images, images2 } from './data/Image';
+import { Link } from 'react-router-dom';
 
 function Body() {
     return (
@@ -24,16 +25,18 @@ function Body() {
                 </Typography>
                 <Slider {...settings2}>
                     {images2.map((img, index) => (
-                        <Grid key={index} sx={{ padding: 1 }}>
-                            <Box
-                                component="img"
-                                src={img}
-                                alt={`Slide ${index}`}
-                                sx={{ width: '100%', height: 'auto' }}
-                            />
-                            <Typography variant="h4" align="center">
-                                abc
-                            </Typography>
+                        <Grid key={index} item sx={{ padding: 1 }}>
+                            <Link to={`/detail/abc`} style={{ textDecoration: 'none' }}>
+                                <Box
+                                    component="img"
+                                    src={img}
+                                    alt={`Slide ${index}`}
+                                    sx={{ width: '100%', height: 'auto' }}
+                                />
+                                <Typography variant="h4" align="center" color="textPrimary">
+                                    abc
+                                </Typography>
+                            </Link>
                         </Grid>
                     ))}
                 </Slider>
@@ -49,7 +52,7 @@ function Body() {
                     gap={12} // Khoảng cách giữa các hình ảnh
                 >
                     {images.map((image, index) => (
-                        <ImageListItem key={index}>
+                        <ImageListItem component={Link} to={`/detail/abc`} key={index}>
                             <img
                                 src={image}
                                 alt={`Gợi ý ${index + 1}`}

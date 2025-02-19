@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app/App.tsx';
 import store from './redux/store.tsx';
 
+import './app/GlobleStyle.scss';
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>

@@ -1,5 +1,5 @@
 // import { Route, Routes } from 'react-router-dom';
-import { Modal } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 import Body from './Body';
 import Footer from './Footer';
 import Header from './Header';
@@ -7,6 +7,10 @@ import Navbar from './Navbar';
 import { createContext, useState } from 'react';
 import Login from './modal/Login';
 import Register from './modal/Register';
+import { Route, Routes } from 'react-router-dom';
+import Category from './Category';
+import Detail from './Detail';
+import Video from './Video';
 
 export const Themecontext = createContext({});
 
@@ -22,10 +26,15 @@ function App() {
 
     return (
         <Themecontext.Provider value={{ setOpen, setIsLogin }}>
-            <div className="App">
+            <Box component="div" className="App" display="flex" flexDirection="column" minHeight="100vh">
                 <Header />
                 <Navbar />
-                <Body />
+                <Routes>
+                    <Route path="/" element={<Body />} />
+                    <Route path="/category/:name" element={<Category />} />
+                    <Route path="/detail/:nameFilm" element={<Detail />} />
+                    <Route path="/video/:nameFilm" element={<Video />} />
+                </Routes>
                 <Footer />
 
                 <Modal
@@ -36,7 +45,7 @@ function App() {
                 >
                     {isLogin ? <Login /> : <Register />}
                 </Modal>
-            </div>
+            </Box>
         </Themecontext.Provider>
     );
 }
