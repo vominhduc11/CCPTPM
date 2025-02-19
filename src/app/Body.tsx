@@ -5,7 +5,7 @@ import { Card, CardMedia, Box, Container, Typography, Grid, ImageList, ImageList
 import { settings, settings2 } from './setting/Carosel';
 import { images, images2 } from './data/Image';
 
-export default function Body() {
+function Body() {
     return (
         <Container maxWidth="xl">
             <Box sx={{ marginTop: 3 }}>
@@ -71,3 +71,5 @@ export default function Body() {
         </Container>
     );
 }
+
+export default Body;

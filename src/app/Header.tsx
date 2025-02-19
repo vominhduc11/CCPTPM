@@ -5,10 +5,11 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import { useContext } from 'react';
+
 import { Themecontext } from './App';
 
 function Header() {
-    const { setOpen } = useContext(Themecontext);
+    const { setOpen } = useContext(Themecontext) as { setOpen: (open: boolean) => void };
 
     return (
         <AppBar position="sticky" sx={{ backgroundColor: '#1c1c1c', boxShadow: 'none' }}>

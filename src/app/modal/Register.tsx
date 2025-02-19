@@ -1,9 +1,9 @@
-import { Container, Box, TextField, Button, Typography, Avatar, Grid, Link } from '@mui/material';
+import { Avatar, Button, Container, Grid, TextField, Typography, Box, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useContext } from 'react';
 import { Themecontext } from '../App';
 
-export default function Login() {
+const Register = () => {
     const { setIsLogin } = useContext(Themecontext) as { setIsLogin: (isLogin: boolean) => void };
 
     return (
@@ -20,9 +20,19 @@ export default function Login() {
                     <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                    Đăng nhập
+                    Đăng ký
                 </Typography>
                 <Box component="form" noValidate sx={{ mt: 1 }}>
+                    <TextField
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="name"
+                        label="Họ và tên"
+                        name="name"
+                        autoComplete="name"
+                        autoFocus
+                    />
                     <TextField
                         margin="normal"
                         required
@@ -31,7 +41,6 @@ export default function Login() {
                         label="Email"
                         name="email"
                         autoComplete="email"
-                        autoFocus
                     />
                     <TextField
                         margin="normal"
@@ -41,20 +50,25 @@ export default function Login() {
                         label="Mật khẩu"
                         type="password"
                         id="password"
-                        autoComplete="current-password"
+                        autoComplete="new-password"
+                    />
+                    <TextField
+                        margin="normal"
+                        required
+                        fullWidth
+                        name="confirmPassword"
+                        label="Xác nhận mật khẩu"
+                        type="password"
+                        id="confirmPassword"
+                        autoComplete="new-password"
                     />
                     <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-                        Đăng nhập
+                        Đăng ký
                     </Button>
-                    <Grid container>
-                        <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Quên mật khẩu?
-                            </Link>
-                        </Grid>
+                    <Grid container justifyContent="flex-end">
                         <Grid item>
-                            <Link href="#" variant="body2" onClick={() => setIsLogin(false)}>
-                                Chưa có tài khoản? Đăng kí
+                            <Link href="#" variant="body2" onClick={() => setIsLogin(true)}>
+                                Đã có tài khoản? Đăng nhập
                             </Link>
                         </Grid>
                     </Grid>
@@ -62,4 +76,6 @@ export default function Login() {
             </Box>
         </Container>
     );
-}
+};
+
+export default Register;
